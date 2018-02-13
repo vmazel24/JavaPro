@@ -1,0 +1,14 @@
+Lorsqu'on appele une methode d'une classe, on l'appele via le proxy.
+Le proxy appele la methode de cette classe, mais avant verifie les @, puis executer du code specifique à ce @.
+
+Pour pouvoir faire cela, on définie une @CDIBehavior(LogInterceptor.class).
+LogInterceptor a methode before et after, et implémente une interface Interceptor.
+
+Donc, lors de l'appel du proxy à la method, on verifie les @, si une des annotations est noté @CDIBehavior(X.class), on
+instance la classe X, on appèle la methode before de la classe X. Puis la methode elle-même. Puis X.after().
+
+                ---> Concerne @Log et @Transactional
+
+
+Use reflections pour parcourir le classpath (retrouver des classes à partir des classloaders) : classes qui implémentent, héritent...
+
