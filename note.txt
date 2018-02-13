@@ -12,3 +12,20 @@ instance la classe X, on appèle la methode before de la classe X. Puis la metho
 
 Use reflections pour parcourir le classpath (retrouver des classes à partir des classloaders) : classes qui implémentent, héritent...
 
+A rendre :
+-Reflexion sur la qualité du code : conventions de nommage, respect lisibilité (noms variables), etc
+-Structure : Pourquoi comme ça ?
+-Couplage : entre les différents composants. Aussi les responsabilités/rôles entre les différents composants pour performance et maintenabilité.
+-Types de pattern : Factory/Singleton dans les noms des classes.
+
+Présentation : 5mn de présentation + 10mn de questions, 5/10 slides
+-Tests verts sur le perimètre de ce qu'on a implémenté
+-Réflexion sur le nombre de lignes utiles de ce qu'on a dev (combien ? A afficher)
+-Is it our own design ? Prrrt Reflechir aux concepts qu'on a vu, pourquoi on fait ça, comprendre le besoin, pourquoi on a fait ça comme ça pour répondre au besoin.
+-Introspections : difficultés rencontrées. Technique, compréhension (mindset, scope ?).
+-Et qu'est ce qu'on a appris pendant ces 16h
+-Critique sur ce que l'on améliorerai sur notre code, notre conception, nos features
+
++Questions réponses pour voir si on maitrise (easy lol)
+
+--> Pas de théorie, pas de trucs lisses genre (c'est quoi un container lol), le but est de banaliser au mieux ce que l'on a fait

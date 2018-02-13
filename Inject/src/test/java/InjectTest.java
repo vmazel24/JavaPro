@@ -1,7 +1,8 @@
 import annotations.Inject;
 import impl.Injector;
-import impl.Personne;
-import interfaces.IPersonne;
+import testClasses.IMaison;
+import testClasses.PreferedPersonne;
+import testClasses.IPersonne;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -13,15 +14,19 @@ import static org.junit.Assert.assertNotNull;
 public class InjectTest {
 
     @Inject
-    private IPersonne personne;
-    @Inject
-    private Personne personneReel;
+    private IPersonne personneInterface;
 
-    private Personne personneNotInjected;
+    @Inject
+    private PreferedPersonne personneClasse;
+
+    private PreferedPersonne personneNotInjected;
+
+    @Inject
+    private IMaison maison;
 
     @BeforeEach
     public void setUp() throws Exception{
-        Injector.inject(this.getClass());
+        Injector.doInjections(this);
     }
 
 
@@ -34,32 +39,29 @@ public class InjectTest {
 
     @Test
     public void testNotNull(){
-        assertNotNull(personne);
+        assertNotNull(personneInterface);
     }
 
     @Test
-    public void testGoodClass(){
-        assertEquals(IPersonne.class, personne.getClass());
+public void testRightClass(){ //--> A debug, ca devrait passer la
+        assertEquals(PreferedPersonne.class, personneClasse.getClass());
     }
+
+    @Test
+    public void testRightPreferedFromInterface(){
+        assertEquals(personneInterface.getClass(), PreferedPersonne.class);
+    }
+
+//    @Test
+//    public void testMultiplyPreferedInterface(){
+//        //assertEquals(IMaison.getClass(), IMaison.class);
+//        //Necessite de faire plusieurs classes d etests : plus propre
+//    }
 
     @Test
     public void testInjectInterfaceWithoutPrefered(){
-        //assertThrows()
-        // Should throw an exception.
+        //cas ou on a une seule implementation sans prefered pour une interface
+        //On doit retrouver cette impl
     }
 
-//    @BeforeEach
-//    void setUpBeforeEach() throws Exception{
-//        inject = new Injector();
-//    }
-//
-//    @Test
-//    void firstInjectTest() throws InstantiationException, IllegalAccessException{
-//        assertNotNull(inject.inject(Personne.class));
-//    }
-//
-//    @Test
-//    void correspondingClassInjectTest() throws InstantiationException, IllegalAccessException{
-//        assertEquals(Personne.class, inject.inject(Personne.class).getClass());
-//    }
 }

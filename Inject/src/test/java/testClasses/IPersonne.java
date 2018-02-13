@@ -1,4 +1,4 @@
-package interfaces;
+package testClasses;
 
 public interface IPersonne {
 }
