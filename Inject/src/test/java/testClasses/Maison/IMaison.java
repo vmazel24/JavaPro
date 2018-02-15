@@ -1,4 +1,4 @@
-package testClasses;
+package testClasses.Maison;
 
 public interface IMaison {
 }

@@ -1,7 +1,5 @@
 package impl;
 
-import annotations.Inject;
-
 import java.lang.reflect.Field;
 
 public class Injector {
@@ -13,7 +11,7 @@ public class Injector {
         for(Field f : attributes){
             Object value = InjectorFactory.getValueToInject(f); //InjectorFactory
             f.setAccessible(true);
-            f.set(f, value);
+            f.set(injected, value);
         }
     }
 }

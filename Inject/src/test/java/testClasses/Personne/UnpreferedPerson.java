@@ -1,4 +1,4 @@
-package testClasses;
+package testClasses.Personne;
 
 public class UnpreferedPerson implements IPersonne {
 }

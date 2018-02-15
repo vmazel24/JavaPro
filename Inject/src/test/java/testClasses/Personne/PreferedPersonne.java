@@ -1,4 +1,4 @@
-package testClasses;
+package testClasses.Personne;
 
 import annotations.Prefered;
 
