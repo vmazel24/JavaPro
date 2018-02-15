@@ -6,7 +6,7 @@ import org.junit.Test;
 import testClasses.Maison.IMaison;
 import testClasses.Vehicule.IVehicule;
 
-public class InjectTestMultiplyPreferedImpl {
+public class PreferedTestMultiplyPreferedImpl {
 
     @Inject
     private IMaison maison;

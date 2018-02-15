@@ -6,8 +6,6 @@ import exceptions.MultiplyPreferedClasses;
 import exceptions.NoImplementationOfInterface;
 import org.reflections.Reflections;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
 import java.util.Set;
 
 public class PreferedFinder {
