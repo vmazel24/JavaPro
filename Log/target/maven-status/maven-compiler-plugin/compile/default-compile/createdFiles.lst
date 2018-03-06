@@ -1,4 +1,4 @@
-impl\FakeLogger.class
-impl\Logger.class
-LogHandler.class
-interfaces\ILogger.class
+fr\isima\interfaces\ILogger.class
+fr\isima\impl\FakeLogger.class
+fr\isima\api\handler\LogHandler.class
+fr\isima\api\annotations\Log.class

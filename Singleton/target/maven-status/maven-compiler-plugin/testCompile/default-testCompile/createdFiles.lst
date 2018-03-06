@@ -1,1 +1,4 @@
+testclasses\PersonneSingleton.class
 SingletonTest.class
+testclasses\IPersonne.class
+testclasses\PersonneNotSingleton.class

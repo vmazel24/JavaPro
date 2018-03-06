@@ -1,6 +1,5 @@
-package impl;
+package testclasses;
 
-import interfaces.IPersonne;
 import java.util.Date;
 
 public class PersonneNotSingleton implements IPersonne {

@@ -1,6 +1,7 @@
+package fr.isima.api.handler;
+
 import fr.isima.api.annotations.Inject;
-import fr.isima.api.handler.ComportmentInterface;
-import interfaces.ILogger;
+import fr.isima.interfaces.ILogger;
 
 public class LogHandler implements ComportmentInterface {
 
@@ -8,7 +9,7 @@ public class LogHandler implements ComportmentInterface {
   private ILogger logger;
 
   @Override public void before() {
-    logger.getLogNumber();
+    logger.incrementLog();
   }
 
   @Override public void after() {

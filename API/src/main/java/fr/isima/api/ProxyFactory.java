@@ -1,10 +1,9 @@
 package fr.isima.api;
 
 import fr.isima.api.exceptions.MultiplyPreferedClasses;
-import fr.isima.api.handler.ProxyHandler;
-import fr.isima.api.handler.SingletonHandler;
+import fr.isima.api.SingletonManager;
 
-public class ProxyGenerator {
+public class ProxyFactory {
 
   @SuppressWarnings("unchecked")
   public static <T> T generate(Class<T> iface)
@@ -13,16 +12,16 @@ public class ProxyGenerator {
     T proxyClass = null;
     if(cls != null)
     {
-      if(SingletonHandler.checkSingleton(cls))
+      if(SingletonManager.checkSingleton(cls))
       {
-        if(SingletonHandler.singletons.containsKey(cls))
+        if(SingletonManager.singletons.containsKey(cls))
         {
-          proxyClass = (T) SingletonHandler.singletons.get(cls);
+          proxyClass = (T) SingletonManager.singletons.get(cls);
         }
         else
         {
           proxyClass = (T) createProxy(cls, iface);
-          SingletonHandler.singletons.put(cls, proxyClass);
+          SingletonManager.singletons.put(cls, proxyClass);
         }
       }
       else
@@ -39,6 +38,6 @@ public class ProxyGenerator {
       throws IllegalAccessException, InstantiationException, MultiplyPreferedClasses {
     Object o = cls.newInstance();
     Injector.inject(o);
-    return ProxyHandler.<T>createProxy((T) o,iface);
+    return ProxyInvokeur.<T>createProxy((T) o,iface);
   }
 }

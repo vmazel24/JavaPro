@@ -1,8 +1,7 @@
-package impl;
+package testclasses;
 
 import fr.isima.api.annotations.Prefered;
 import fr.isima.api.annotations.Singleton;
-import interfaces.IPersonne;
 import java.util.Date;
 
 @Singleton

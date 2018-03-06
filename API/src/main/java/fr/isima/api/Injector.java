@@ -13,7 +13,7 @@ public class Injector {
       if(field.isAnnotationPresent(Inject.class))
       {
         field.setAccessible(true);
-        field.set(o, ProxyGenerator.generate(field.getType()));
+        field.set(o, ProxyFactory.generate(field.getType()));
       }
     }
   }

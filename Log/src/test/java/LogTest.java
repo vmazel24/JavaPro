@@ -1,8 +1,7 @@
 import fr.isima.api.Injector;
 import fr.isima.api.annotations.Inject;
 import fr.isima.api.exceptions.MultiplyPreferedClasses;
-import impl.FakeLogger;
-import interfaces.ILogger;
+import fr.isima.interfaces.ILogger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import testclasses.IMeuble;
@@ -27,6 +26,6 @@ public class LogTest {
         table.flip();
         table.flip();
         table.flip();
-        assertEquals(3, fakeLogger.getLogNumber());
+        assertEquals(3, fakeLogger.getLoggerNumber());
     }
 }

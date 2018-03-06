@@ -1,13 +1,10 @@
 testClasses\Organe\IVaisseau.class
 testClasses\Maison\IMaison.class
 testClasses\Personne\UnpreferedPerson.class
-PreferedTestMultiplyPreferedImpl.class
 testClasses\Maison\PreferedMaison.class
-InjectTestOnlyOneImpl.class
 testClasses\Organe\Cerveau.class
 testClasses\Organe\IOrgane.class
 testClasses\Maison\AnotherPreferedMaison.class
-InjectTestNoImplOfInterface.class
 testClasses\Organe\Veine.class
 testClasses\Organe\Artere.class
 CascadeTestBase.class

@@ -1,6 +1,6 @@
 import fr.isima.api.annotations.Inject;
 import fr.isima.api.Injector;
-import interfaces.IPersonne;
+import testclasses.IPersonne;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
