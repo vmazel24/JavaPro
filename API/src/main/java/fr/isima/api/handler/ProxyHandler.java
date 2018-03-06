@@ -1,5 +1,7 @@
-package handler;
+package fr.isima.api.handler;
 
+import fr.isima.api.Injector;
+import fr.isima.api.exceptions.MultiplyPreferedClasses;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -56,11 +58,12 @@ public class ProxyHandler <T> implements InvocationHandler {
   }
 
   private List<ComportmentInterface> getComportments(List<Class> clazzs)
-      throws IllegalAccessException, InstantiationException {
+      throws IllegalAccessException, InstantiationException, MultiplyPreferedClasses {
     List<ComportmentInterface> comportments = new ArrayList<>();
     for(Class clazz : clazzs)
     {
       ComportmentInterface comportment = (ComportmentInterface) clazz.newInstance();
+      Injector.inject(comportment);
       comportments.add(comportment);
     }
 

@@ -1,7 +1,6 @@
-package handler;
+package fr.isima.api.handler;
 
-import annotations.Singleton;
-import java.lang.annotation.Annotation;
+import fr.isima.api.annotations.Singleton;
 import java.util.HashMap;
 import java.util.Map;
 
