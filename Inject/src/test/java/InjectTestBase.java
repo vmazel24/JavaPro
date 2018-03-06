@@ -1,10 +1,10 @@
-import annotations.Inject;
+import fr.isima.api.Injector;
+import fr.isima.api.annotations.Inject;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import testClasses.Personne.PreferedPersonne;
 import testClasses.Personne.IPersonne;
-import testClasses.Personne.UnpreferedPerson;
 
 import static junit.framework.TestCase.assertNull;
 

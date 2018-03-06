@@ -1,17 +1,10 @@
 package impl;
 
 import interfaces.IPersonne;
+import java.util.Date;
 
 public class PersonneNotSingleton implements IPersonne {
-    private String nom;
-
-    @Override
-    public void setNom(String nom_) {
-        nom = nom_;
-    }
-
-    @Override
-    public String getNom() {
-        return nom;
+    @Override public Date getCreationTime() {
+        return new Date();
     }
 }

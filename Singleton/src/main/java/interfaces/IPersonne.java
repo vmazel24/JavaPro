@@ -1,6 +1,7 @@
 package interfaces;
 
+import java.util.Date;
+
 public interface IPersonne {
-    public void setNom(String nom);
-    public String getNom();
+    Date getCreationTime();
 }

@@ -4,7 +4,7 @@ Le proxy appele la methode de cette classe, mais avant verifie les @, puis execu
 Pour pouvoir faire cela, on définie une @CDIBehavior(LogInterceptor.class).
 LogInterceptor a methode before et after, et implémente une interface Interceptor.
 
-Donc, lors de l'appel du proxy à la method, on verifie les @, si une des annotations est noté @CDIBehavior(X.class), on
+Donc, lors de l'appel du proxy à la method, on verifie les @, si une des fr.isima.api.annotations est noté @CDIBehavior(X.class), on
 instance la classe X, on appèle la methode before de la classe X. Puis la methode elle-même. Puis X.after().
 
                 ---> Concerne @Log et @Transactional

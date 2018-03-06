@@ -1,43 +1,17 @@
 package impl;
 
-import annotations.Prefered;
-import annotations.Singleton;
+import fr.isima.api.annotations.Prefered;
+import fr.isima.api.annotations.Singleton;
+import interfaces.ILogger;
 
 @Prefered
 @Singleton
-public class FakeLogger {
-    private boolean before;
-    private boolean after;
+public class FakeLogger implements ILogger {
 
-    public FakeLogger(){
-        before = false;
-        after = false;
+    public int numberOfLog = 0;
+
+    @Override public int getLogNumber() {
+        numberOfLog++;
+        return numberOfLog;
     }
-
-    public void execute(){
-        before();
-        after();
-    }
-
-    private void before(){
-        before = true;
-    }
-
-    private void after(){
-        after = true;
-    }
-
-    public void reset(){
-        before = false;
-        after = false;
-    }
-
-    public boolean getBefore(){
-        return before;
-    }
-
-    public boolean getAfter(){
-        return after;
-    }
-
 }

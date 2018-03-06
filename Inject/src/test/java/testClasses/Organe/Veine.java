@@ -1,6 +1,6 @@
 package testClasses.Organe;
 
-import annotations.Prefered;
+import fr.isima.api.annotations.Prefered;
 
 @Prefered
 public class Veine implements IVaisseau{

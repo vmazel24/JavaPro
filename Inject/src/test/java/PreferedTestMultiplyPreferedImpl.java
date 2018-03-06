@@ -1,9 +1,7 @@
-import annotations.Inject;
-import exceptions.MultiplyPreferedClasses;
-import org.junit.Assert;
+import fr.isima.api.annotations.Inject;
+import fr.isima.api.exceptions.MultiplyPreferedClasses;
 import org.junit.Test;
 import testClasses.Maison.IMaison;
-import testClasses.Vehicule.IVehicule;
 
 public class PreferedTestMultiplyPreferedImpl {
 

@@ -1,6 +1,6 @@
 package testClasses.Maison;
 
-import annotations.Prefered;
+import fr.isima.api.annotations.Prefered;
 
 @Prefered
 public class PreferedMaison implements IMaison {

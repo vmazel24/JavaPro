@@ -1,6 +1,6 @@
 package testClasses.Personne;
 
-import annotations.Prefered;
+import fr.isima.api.annotations.Prefered;
 
 @Prefered
 public class PreferedPersonne implements IPersonne {

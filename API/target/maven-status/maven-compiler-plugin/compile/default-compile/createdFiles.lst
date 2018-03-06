@@ -1,0 +1,15 @@
+annotations\Log.class
+handler\ProxyHandler.class
+annotations\Transactional.class
+exceptions\MultiplyPreferedClasses.class
+annotations\Inject.class
+handler\SingletonHandler.class
+annotations\Singleton.class
+handler\ComportmentInterface.class
+exceptions\NoImplementationOfInterface.class
+ProxyGenerator.class
+annotations\CDIBehavior.class
+annotations\Prefered.class
+Injector.class
+ClassSelector.class
+exceptions\MultiplyImplementationWithoutPrefered.class

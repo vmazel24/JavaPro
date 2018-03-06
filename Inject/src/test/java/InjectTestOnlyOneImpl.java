@@ -1,4 +1,4 @@
-import annotations.Inject;
+import fr.isima.api.annotations.Inject;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

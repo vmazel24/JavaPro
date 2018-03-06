@@ -1,0 +1,3 @@
+impl\PersonneNotSingleton.class
+interfaces\IPersonne.class
+impl\PersonneSingleton.class

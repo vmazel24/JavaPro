@@ -1,21 +1,15 @@
 package impl;
 
-import annotations.Singleton;
+import fr.isima.api.annotations.Prefered;
+import fr.isima.api.annotations.Singleton;
 import interfaces.IPersonne;
+import java.util.Date;
 
 @Singleton
+@Prefered
 public class PersonneSingleton implements IPersonne {
 
-    private String nom;
-
-    @Override
-    public String getNom(){
-            return nom;
-        }
-
-    @Override
-    public void setNom(String nom_){
-            this.nom = nom_;
-        }
-
+  @Override public Date getCreationTime() {
+    return new Date();
+  }
 }

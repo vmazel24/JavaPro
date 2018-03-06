@@ -1,5 +1,5 @@
-import annotations.Inject;
-import exceptions.NoImplementationOfInterface;
+import fr.isima.api.annotations.Inject;
+import fr.isima.api.exceptions.NoImplementationOfInterface;
 import org.junit.Test;
 import testClasses.Vehicule.IVehicule;
 

@@ -1,6 +1,6 @@
 package testClasses.Organe;
 
-import annotations.Inject;
+import fr.isima.api.annotations.Inject;
 
 public class Cerveau implements IOrgane{
 
