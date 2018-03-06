@@ -5,9 +5,13 @@ import annotations.Inject;
 public class Cerveau implements IOrgane{
 
     @Inject
-    private Veine veine;
+    private IVaisseau vaisseau;
 
-    public Veine getVeine() {
-        return veine;
+    public IVaisseau getVaisseau() {
+        return vaisseau;
+    }
+
+    @Override public String showClassIdentifier() {
+        return "Cerveau";
     }
 }

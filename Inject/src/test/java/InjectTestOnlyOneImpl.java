@@ -1,5 +1,4 @@
 import annotations.Inject;
-import impl.Injector;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +12,7 @@ public class InjectTestOnlyOneImpl {
 
     @Before
     public void setUp() throws Exception{
-        Injector.doInjections(this);
+        //TODO
     }
 
     @Test

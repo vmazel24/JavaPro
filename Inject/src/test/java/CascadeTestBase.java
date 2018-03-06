@@ -1,5 +1,4 @@
 import annotations.Inject;
-import impl.Injector;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,12 +11,19 @@ public class CascadeTestBase {
 
     @Before
     public void setUp() throws Exception{
-        Injector.doInjections(this);
+        Injector.inject(this);
     }
 
     @Test
     public void testWithoutInject(){
-        Assert.assertNotNull(organe.getVeine());
+        Assert.assertNotNull(organe.getVaisseau());
+    }
+
+    @Test
+    public void testValidClasses()
+    {
+        Assert.assertEquals("Cerveau", organe.showClassIdentifier());
+        Assert.assertEquals("Veine", organe.getVaisseau().showClassIdentifier());
     }
 
 }

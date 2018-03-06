@@ -1,6 +1,5 @@
 import annotations.Inject;
 import exceptions.MultiplyPreferedClasses;
-import impl.Injector;
 import org.junit.Assert;
 import org.junit.Test;
 import testClasses.Maison.IMaison;
@@ -13,6 +12,6 @@ public class PreferedTestMultiplyPreferedImpl {
 
     @Test(expected= MultiplyPreferedClasses.class)
     public void testMultiplyPreferedInterface() throws Exception{
-        Injector.doInjections(this);
+        //TODO
     }
 }
